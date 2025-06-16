@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
+import { ActivatedRoute } from '@angular/router';
 
 export interface PeriodicElement {
   name: string;
@@ -31,5 +32,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class DashboardComponent {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
+
+  private route = inject(ActivatedRoute);
+  resolvedData = this.route.snapshot.data['resolvedData'];
+
+  ngOnInit() {
+    console.log('Resolved Data:', this.resolvedData);
+  }
 
 }
