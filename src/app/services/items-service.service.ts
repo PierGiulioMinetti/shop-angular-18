@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ItemsI } from '../interfaces/items.interface';
+import { ItemsI, Product } from '../interfaces/items.interface';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -13,5 +13,9 @@ export class ItemsServiceService {
 
   getItems():Observable<ItemsI>{
     return this.http.get<ItemsI>(this.URL)
+  }
+
+  getProducts():Observable<Product[]>{
+    return this.http.get<Product[]>(this.URL)
   }
 }
