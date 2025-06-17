@@ -10,8 +10,15 @@
 :host{
   .title{
     text-align: center;
-
   }
+
+  .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
   .tabella{
     height: 70vh;
     width: 50%;
