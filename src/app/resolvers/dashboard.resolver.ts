@@ -7,5 +7,5 @@ import { inject } from '@angular/core';
 
 export const dashboardResolver: ResolveFn<Observable<Product[]>> = (route, state) => {
   const itemsService = inject(ItemsServiceService);
-  return itemsService.getProducts(); // Replace getProducts with the actual method returning Observable<Product[][]>
+  return itemsService.getProducts();
 };

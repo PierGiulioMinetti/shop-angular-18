@@ -40,8 +40,12 @@
       <td mat-cell *matCellDef="let element">
         <div class="action-buttons margin-auto">
               <div class="example-button-row action-buttons">
-                <button mat-flat-button  color="primary">View Detail</button>
-                <button mat-flat-button  color="accent">Add to Cart</button>
+                <button mat-flat-button (click)="openDetail(element.id)" color="primary">
+                  View Detail
+                </button>
+                <button mat-flat-button  color="accent">
+                  Add to Cart
+                </button>
                 <!-- <button mat-flat-button  color="warn">Delete Product</button> -->
               </div>
           </div>
